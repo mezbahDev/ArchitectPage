@@ -113,8 +113,8 @@ main {
   margin: 0 auto;
 }
 
-main>section{
-    margin-top: 130px;
+main > section {
+  margin-top: 130px;
 }
 
 /* team section style */
@@ -153,7 +153,54 @@ main>section{
   color: var(--dark-03);
 }
 
-/* mobile screen style */
+/* facts section style */
+
+.facts {
+  flex-direction: column;
+}
+.facts-container {
+  margin-top: 24px;
+  gap: 24px;
+}
+.facts-title {
+  font-size: 3rem;
+  color: var(--dark-01);
+}
+.facts-description {
+  font-size: 1.1rem;
+  color: var(--dark-03);
+  max-width: 550px;
+  line-height: 26px;
+}
+
+.facts-card {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  margin-top: 100px;
+}
+
+.fact-box {
+  width: 240px;
+  height: 240px;
+  border: 1px solid var(--primary-color);
+  padding: 45px 35px;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  border-radius: 8px;
+}
+
+.fact-number {
+  color: var(--dark-02);
+  font-size: 3rem;
+}
+
+.fact-name {
+  color: var(--dark-03);
+  font-size: 1.2rem;
+}
+
+/* <<<<<<<<<<<   small screen style  >>>>>>>>>> */
 
 @media screen and (max-width: 576px) {
   .navbar,
@@ -162,25 +209,77 @@ main>section{
     flex-direction: column;
   }
 
-  .team-img-container{
+  /* team section style */
+
+  .team-img-container {
     grid-template-columns: 1fr;
   }
 
-  .our-features{
+  .our-features {
     justify-items: center;
     margin-left: 30px;
     margin-top: 2rem;
   }
+
+  /* facts section style */
+
+  .facts-container {
+    margin: 0 1rem;
+  }
+
+  .facts-title {
+    font-size: 2rem;
+  }
+  .facts-description {
+    font-size: 0.8rem;
+    max-width: 550px;
+    line-height: 22px;
+  }
+
+  .facts-card {
+    grid-template-columns: 1fr;
+    margin-top: 20px;
+    justify-items: center;
+    gap: 2rem;
+  }
+
+  .fact-box {
+    gap: 10px;
+    border-radius: 8px;
+  }
 }
 
-/* medium screen style */
+/* <<<<<<<<<<<   medium screen style  >>>>>>>>>> */
 
 @media screen and (min-width: 576px) and (max-width: 992px) {
-.team{
+  /* team section style */
+  .team {
     flex-direction: column;
   }
 
-  .our-features{
+  .our-features {
     margin: 2rem auto;
   }
+
+    /* facts section style */
+
+  .facts-container {
+    margin: 0 2rem;
+  }
+
+  .facts-title {
+    font-size: 3rem;
+  }
+  .facts-description {
+    font-size: 1rem;
+    line-height: 22px;
+  }
+
+  .facts-card {
+    grid-template-columns: repeat(2, 1fr);
+    margin-top: 40px;
+    justify-items: center;
+    gap: 2rem;
+  }
+
 }
